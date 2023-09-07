@@ -13,9 +13,10 @@
 
         <div class="form-group">
             <label for="sentence">Phrase à écrire : </label>
-            <input type="text" class="form-control" name="sentence" value="Je ne copie pas le code de valentin">
+            <input type="text" class="form-control" name="sentence" value="<?= @$_SESSION['sentence']??' '?>">
         </div>
 
         <input type="submit" value="Générer la punition" class="btn btn-danger ma-auto">
     </form>
+
 </div>
