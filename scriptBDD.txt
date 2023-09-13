@@ -1,0 +1,8 @@
+CREATE TABLE Phrases(
+   idPhrase CHAR(50),
+   phrase VARCHAR(50),
+   nombre INT,
+   datePhrase DATE,
+   ip VARCHAR(50),
+   PRIMARY KEY(idPhrase)
+);

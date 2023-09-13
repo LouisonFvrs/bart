@@ -6,13 +6,21 @@ session_start();
 include('common/header.php');
 
 // Pages autorisées (configuration à sortir dans un autre fichier PHP)
-$whitelist = array('home','bart');
+
+$whitelist = [];
+
+if (isset($_SESSION['connexion'])) {
+  $whitelist = ['bart', 'home', 'login'];
+}
+else {
+  $whitelist = array('home','bart');
+}
 
 // Gestion de l'affichage de la page demandée
 if(isset($_GET['page']) && in_array($_GET['page'], $whitelist)) {
   include("pages/" . $_GET['page'] . '.php');
 } else {
-  include('pages/home.php');
+  include('pages/login.php');
 }
 
 // Affichage de la partie basse de votre site, commun à l'ensemble de votre site.

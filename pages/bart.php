@@ -7,6 +7,6 @@
     for($i = 0; $i < $step; $i++) {
         echo htmlspecialchars($_SESSION['sentence']) . '<br>';
     }
-
+    $_SESSION['connexion'] = "";
     ?>
 </div>
